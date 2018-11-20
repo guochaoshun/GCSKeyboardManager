@@ -1,4 +1,3 @@
 # GCSKeyboardManager
-IQKeyboardManager低配版, 可以快速看看里面的原理
-
+IQKeyboardManager 好大好复杂啊 , 写个低配版先用用
 
