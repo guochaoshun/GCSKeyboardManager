@@ -1,3 +1,2 @@
 # GCSKeyboardManager
-IQKeyboardManager 好大好复杂啊 , 写个低配版先用用
-
+IQKeyboardManager 好大好复杂啊 , 自己造个轮子先用用
