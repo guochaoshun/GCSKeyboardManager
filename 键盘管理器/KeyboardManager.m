@@ -62,8 +62,11 @@
     UIScrollView * superScrollView = [self getInputSuperView:inputView];
     if (superScrollView) {
         moveHeight -= superScrollView.contentOffset.y;
+        if (moveHeight<0) {
+            return;
+        }
     }
-    NSLog(@"%@ -- %@ -- %@ ",vc,vc.view,superScrollView);
+    NSLog(@"%@ -- %@ -- %@ -- %lf ",vc,vc.view,superScrollView,moveHeight);
     
     [UIView animateWithDuration:time animations:^{
         if (superScrollView) {
