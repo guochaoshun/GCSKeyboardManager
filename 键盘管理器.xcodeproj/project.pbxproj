@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1811B9C4225B4E6900FD2902 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811B9C3225B4E6900FD2902 /* TableViewController.m */; };
 		9C63651820E0BAB600EB21BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C63651720E0BAB600EB21BC /* AppDelegate.m */; };
 		9C63651B20E0BAB600EB21BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C63651A20E0BAB600EB21BC /* ViewController.m */; };
 		9C63651E20E0BAB600EB21BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C63651C20E0BAB600EB21BC /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1811B9C2225B4E6900FD2902 /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		1811B9C3225B4E6900FD2902 /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		9C63651320E0BAB600EB21BC /* 键盘管理器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "键盘管理器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C63651620E0BAB600EB21BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9C63651720E0BAB600EB21BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -114,6 +117,8 @@
 				9C63651720E0BAB600EB21BC /* AppDelegate.m */,
 				9C63651920E0BAB600EB21BC /* ViewController.h */,
 				9C63651A20E0BAB600EB21BC /* ViewController.m */,
+				1811B9C2225B4E6900FD2902 /* TableViewController.h */,
+				1811B9C3225B4E6900FD2902 /* TableViewController.m */,
 				9C63657920E0DF9800EB21BC /* KeyboardManager.h */,
 				9C63657A20E0DF9800EB21BC /* KeyboardManager.m */,
 				9C63657C20E0E96400EB21BC /* NSArray+log.h */,
@@ -282,6 +287,7 @@
 				9C63652620E0BAC200EB21BC /* main.m in Sources */,
 				9C63651820E0BAB600EB21BC /* AppDelegate.m in Sources */,
 				9C63657B20E0DF9800EB21BC /* KeyboardManager.m in Sources */,
+				1811B9C4225B4E6900FD2902 /* TableViewController.m in Sources */,
 				9C63657E20E0E96500EB21BC /* NSArray+log.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

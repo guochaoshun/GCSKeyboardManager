@@ -59,10 +59,19 @@
     // 被盖住的高度
     CGFloat moveHeight = inputViewMaxY  - keyboardMinY ;
     
-    NSLog(@"%@ -- %@",vc,vc.view);
+    UIScrollView * superScrollView = [self getInputSuperView:inputView];
+    if (superScrollView) {
+        moveHeight -= superScrollView.contentOffset.y;
+    }
+    NSLog(@"%@ -- %@ -- %@ ",vc,vc.view,superScrollView);
     
     [UIView animateWithDuration:time animations:^{
-        vc.view.y = -moveHeight ;
+        if (superScrollView) {
+            CGPoint oldPoint = superScrollView.contentOffset;
+            [superScrollView setContentOffset:CGPointMake(oldPoint.x, oldPoint.y+moveHeight)];
+        } else {
+            vc.view.y = -moveHeight ;
+        }
     }];
 }
 - (void)keyboardDidShow:(NSNotification *)noti {
@@ -75,8 +84,15 @@
     NSTimeInterval time = [userInfo[@"UIKeyboardAnimationDurationUserInfoKey"] doubleValue];
 
     UIViewController * vc = [self getViewControllerWithInputView:inputView];
+    
+    UIScrollView * superScrollView = [self getInputSuperView:inputView];
+
     [UIView animateWithDuration:time animations:^{
-        vc.view.y = 0 ;
+        if (superScrollView) {
+            // 好像不用做什么处理,系统会自动给处理到一个合适的高度,超出部分会自动回弹
+        } else {
+            vc.view.y = 0 ;
+        }
     }];
     
 }
@@ -111,6 +127,17 @@
         
     } while (nextResponder);
     
+    return nil;
+}
+
+
+- (UIScrollView *)getInputSuperView:(UIView *)inputView {
+    while (inputView.superview) {
+        if ([inputView.superview isKindOfClass:[UIScrollView class]]) {
+            return (UIScrollView *)inputView.superview;
+        }
+        inputView = inputView.superview;
+    }
     return nil;
 }
 
